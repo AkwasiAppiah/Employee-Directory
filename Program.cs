@@ -20,7 +20,7 @@ namespace Employee_Directory
             Console.WriteLine("Welcome to the Employee Database");
             Thread.Sleep(1500);
 
-            var userInput = CollectUserInput.MakeChoice();
+            var userInput = CollectUserInput.MakeChoice() ?? "";
 
             do
             {
