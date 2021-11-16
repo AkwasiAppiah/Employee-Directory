@@ -23,7 +23,7 @@ namespace Employee_Directory
             Console.WriteLine("Please enter Gender");
             var gender = Console.ReadLine();
 
-            Console.WriteLine("Please enter DoB");
+            Console.WriteLine("Please enter DoB in this format dd/mm/yyyy");
             var doB = Console.ReadLine();
 
             Console.WriteLine("Please enter the first Line of your address");

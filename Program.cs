@@ -72,12 +72,19 @@ namespace Employee_Directory
                         break;
 
                     case "l":
-                        // if empty handle this case
-                        foreach (var employeeToString in employees.Select(employee =>
-                            JsonConvert.SerializeObject(employee)))
+                        // if empty handle this case - Done 
+                        if (!employees.Any())
                         {
-                            Console.WriteLine(employeeToString);
+                            Console.WriteLine("Directory is empty ");
                         }
+                        else
+                        {
+                            foreach (var employeeToString in employees.Select(employee => JsonConvert.SerializeObject(employee)))
+                            {
+                                Console.WriteLine(employeeToString);
+                            }
+                        }
+                        
 
                         Console.WriteLine(
                             "What do you want to do? Press 'l' to print a list of employees or 'c' to enter one. Press 'x' to exit the program.");

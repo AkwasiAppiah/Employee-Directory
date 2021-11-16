@@ -20,7 +20,7 @@ namespace Employee_Directory
             RuleFor(employee => employee.Gender).Matches(@"^(?:m|M|male|Male|f|F|female|Female)$");
 
             // DOB
-            RuleFor(employee => employee.DoB).Matches(@"^(?:0[1-9]|[12]\d|3[01])([\/.-])(?:0[1-9]|1[012])\1(?:19|20)\d\d$");
+            RuleFor(employee => employee.DoB).Matches(@"^(?:0[1-9]|[12]\d|3[01])([\/.-])(?:0[1-9]|1[012])\1(?:19|20)\d\d$").WithMessage("dd/mm/yyyy");
 
             // Address 1
             RuleFor(employee => employee.Address1).Matches(@"^(?!\s*$).+").WithMessage("Please do not leave blank"); ;
