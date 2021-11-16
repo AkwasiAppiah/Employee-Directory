@@ -13,6 +13,9 @@ namespace Employee_Directory
         //1.  fluent validation - nuget package - In Progress 
 
         //2. Case insensitive - throw errors - DONE
+        // Refactored to abstract from main program. 
+        // refactored to print empty directory
+        // prevent entry if validation error
 
         private static void Main()
         {
