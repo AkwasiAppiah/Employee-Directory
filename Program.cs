@@ -76,7 +76,7 @@ namespace Employee_Directory
                             }
                         }
 
-                        userInput = CollectUserInput.MakeChoice();
+                        userInput = CollectUserInput.MakeChoice() ?? "";
                         break;
 
                     case "x":
@@ -84,7 +84,7 @@ namespace Employee_Directory
 
                     default:
                         Console.WriteLine("Please enter a valid input");
-                        userInput = Console.ReadLine();
+                        userInput = Console.ReadLine() ?? "";
                         break;
                 }
 
