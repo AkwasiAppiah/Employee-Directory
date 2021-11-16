@@ -64,7 +64,6 @@ namespace Employee_Directory
                         break;
 
                     case "l":
-                        // if empty handle this case - Done 
                         if (!employees.Any())
                         {
                             Console.WriteLine("Directory is empty ");
