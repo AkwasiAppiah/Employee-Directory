@@ -53,6 +53,7 @@ namespace Employee_Directory
                             {
                                 Console.WriteLine("Property " + failure.PropertyName + " failed validation. Error was: " + failure.ErrorMessage);
                                 // design function to take in result object loop through each failure name and within the class enforce validation returning a dictionary of values to reassign in scope.
+                                // sunit -while loop validate on entry - temporary list
                             }
                         }
                         else
