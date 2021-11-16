@@ -22,18 +22,15 @@ namespace Employee_Directory
             var employees = new List<Employee>();
             Console.WriteLine("Welcome to the Employee Database");
             Thread.Sleep(1500);
-            Console.WriteLine("What do you want to do? Press 'l' to print a list of employees or 'c' to enter one. Press 'x' to exit the program.");
 
-            var userInput = Console.ReadLine();
+            var userInput = CollectUserInput.MakeChoice();
 
             do
             {
                 switch (userInput.ToLower())
                 {
-                    // abstract this out
                     case "c":
-                        var userInputs = new CollectUserInput();
-                        var listOfInputs = userInputs.GetUserInputs().ToList();
+                        var listOfInputs = CollectUserInput.GetUserInputs().ToList();
 
                         var employeeToAdd = new Employee()
                         {
@@ -57,8 +54,7 @@ namespace Employee_Directory
                         {
                             foreach (var failure in result.Errors)
                             {
-                                Console.WriteLine("Property " + failure.PropertyName +
-                                                  " failed validation. Error was: " + failure.ErrorMessage);
+                                Console.WriteLine("Property " + failure.PropertyName + " failed validation. Error was: " + failure.ErrorMessage);
                                 // design function to take in result object loop through each failure name and within the class enforce validation returning a dictionary of values to reassign in scope.
                             }
                         }
@@ -67,8 +63,7 @@ namespace Employee_Directory
                             employees.Add(employeeToAdd);
                         }
 
-                        Console.WriteLine("What do you want to do? Press 'l' to print a list of employees or 'c' to enter one. Press 'x' to exit the program.");
-                        userInput = Console.ReadLine();
+                        userInput = CollectUserInput.MakeChoice();
                         break;
 
                     case "l":
@@ -84,11 +79,8 @@ namespace Employee_Directory
                                 Console.WriteLine(employeeToString);
                             }
                         }
-                        
 
-                        Console.WriteLine(
-                            "What do you want to do? Press 'l' to print a list of employees or 'c' to enter one. Press 'x' to exit the program.");
-                        userInput = Console.ReadLine();
+                        userInput = CollectUserInput.MakeChoice();
                         break;
 
                     case "x":

@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Employee_Directory
 {
-    public class CollectUserInput
+    public static class CollectUserInput
     {
-        public IEnumerable<string> GetUserInputs()
+        public static IEnumerable<string> GetUserInputs()
         {
             Console.WriteLine("Welcome to the Employee Database");
 
@@ -50,6 +50,13 @@ namespace Employee_Directory
             var userInputArray = new List<string>{firstName,lastName,department,gender,doB,addressLine1,addressLine2,addressLine3,addressLine4,postcode,mobileNumber,designation};
 
             return userInputArray;
+        }
+
+        public static string MakeChoice()
+        {
+            Console.WriteLine("What do you want to do? Press 'l' to print a list of employees or 'c' to enter one. Press 'x' to exit the program.");
+            var userInput = Console.ReadLine();
+            return userInput;
         }
     }
 }
