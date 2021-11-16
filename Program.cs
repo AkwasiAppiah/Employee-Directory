@@ -70,6 +70,7 @@ namespace Employee_Directory
                         }
                         else
                         {
+                            // ReSharper disable once ConvertClosureToMethodGroup
                             foreach (var employeeToString in employees.Select(employee => JsonConvert.SerializeObject(employee)))
                             {
                                 Console.WriteLine(employeeToString);
